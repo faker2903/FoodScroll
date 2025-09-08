@@ -95,7 +95,7 @@ A TikTok-like social video sharing platform specifically designed for food conte
    ```
 
 6. **Access the application**
-   - Frontend: http://localhost:3001
+   - Frontend: http://localhost:5173
    - Backend API: http://localhost:3000
 
 ## 🔗 API Endpoints
