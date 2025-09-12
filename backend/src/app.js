@@ -13,7 +13,7 @@ const app = express();
 // credentials: true allows cookies to be sent from frontend to backend
 // origin: "http://localhost:5173" allows only this origin to access the backend
 app.use(cors({
-    origin: process.env.REACT_APP_API_BASE_URL || "http://localhost:5173",
+    origin: "*",
     credentials: true
 }));
 
