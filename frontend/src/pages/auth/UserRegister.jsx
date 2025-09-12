@@ -20,7 +20,7 @@ const UserRegister = () => {
 
 //got cors error, need to add withCredentials: true in axios post request(cant access another website from another website without this) solution just implement require cors in backend app.js
 //after cor cookies are not being set in the browser, need to add withCredentials: true in axios post request to allow cookies to be set in the browser
-        const response = await axios.post("http://localhost:3000/api/auth/user/register", {
+        const response = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/auth/user/register`, {
             fullName: firstName + " " + lastName,
             email,
             password

@@ -11,7 +11,7 @@ const Home = () => {
   // Fetch videos on mount
   useEffect(() => {
     axios
-      .get('http://localhost:3000/api/food', { withCredentials: true })
+      .get(`${process.env.REACT_APP_API_BASE_URL}/api/food`, { withCredentials: true })
       .then((response) => {
         setVideos(response.data.foodItems)
       })
@@ -23,7 +23,7 @@ const Home = () => {
   // Like/unlike video
   async function likeVideo(item) {
     const response = await axios.post(
-      'http://localhost:3000/api/food/like',
+      `${process.env.REACT_APP_API_BASE_URL}/api/food/like`,
       { foodId: item._id },
       { withCredentials: true }
     )
@@ -40,7 +40,7 @@ const Home = () => {
   // Save/unsave video
   async function saveVideo(item) {
     const response = await axios.post(
-      'http://localhost:3000/api/food/save',
+        `${process.env.REACT_APP_API_BASE_URL}/api/food/save`,
       { foodId: item._id },
       { withCredentials: true }
     )
