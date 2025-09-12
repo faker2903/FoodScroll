@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 const UserRegister = () => {
 
     const navigate = useNavigate();
-// Handle form submission 
+    // Handle form submission 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -16,18 +16,18 @@ const UserRegister = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
 
-// Make a POST request to the backend API register the user
+        // Make a POST request to the backend API register the user
 
-//got cors error, need to add withCredentials: true in axios post request(cant access another website from another website without this) solution just implement require cors in backend app.js
-//after cor cookies are not being set in the browser, need to add withCredentials: true in axios post request to allow cookies to be set in the browser
-        const response = await axios.post(`${import.meta.env.REACT_APP_API_BASE_URL}/api/auth/user/register`, {
+        //got cors error, need to add withCredentials: true in axios post request(cant access another website from another website without this) solution just implement require cors in backend app.js
+        //after cor cookies are not being set in the browser, need to add withCredentials: true in axios post request to allow cookies to be set in the browser
+        const response = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/auth/user/register`, {
             fullName: firstName + " " + lastName,
             email,
             password
         },
-        {
-            withCredentials: true
-        })
+            {
+                withCredentials: true
+            })
 
         console.log(response.data);//response from the backend
 

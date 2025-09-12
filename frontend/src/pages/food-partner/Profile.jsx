@@ -5,16 +5,16 @@ import axios from 'axios'
 
 const Profile = () => {
     const { id } = useParams()
-    const [ profile, setProfile ] = useState(null)
-    const [ videos, setVideos ] = useState([])
+    const [profile, setProfile] = useState(null)
+    const [videos, setVideos] = useState([])
 
     useEffect(() => {
-        axios.get(`${import.meta.env.REACT_APP_API_BASE_URL}/api/food-partner/${id}`, { withCredentials: true })
+        axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/food-partner/${id}`, { withCredentials: true })
             .then(response => {
                 setProfile(response.data.foodPartner)
                 setVideos(response.data.foodPartner.foodItems)
             })
-    }, [ id ])
+    }, [id])
 
 
     return (
@@ -59,7 +59,7 @@ const Profile = () => {
                             style={{ objectFit: 'cover', width: '100%', height: '100%' }}
                             src={v.video} muted >
 
-                       </video>
+                        </video>
                     </div>
                 ))}
             </section>
