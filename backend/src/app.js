@@ -13,7 +13,7 @@ const app = express();
 // credentials: true allows cookies to be sent from frontend to backend
 // origin: "http://localhost:5173" allows only this origin to access the backend
 app.use(cors({
-    origin: "https://food-scroll-k7td.vercel.app/",
+    origin: "https://food-scroll-k7td.vercel.app",
     credentials: true
 }));
 
