@@ -9,7 +9,7 @@ const Profile = () => {
     const [ videos, setVideos ] = useState([])
 
     useEffect(() => {
-        axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/food-partner/${id}`, { withCredentials: true })
+        axios.get(`${import.meta.env.REACT_APP_API_BASE_URL}/api/food-partner/${id}`, { withCredentials: true })
             .then(response => {
                 setProfile(response.data.foodPartner)
                 setVideos(response.data.foodPartner.foodItems)

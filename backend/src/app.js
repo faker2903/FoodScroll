@@ -5,6 +5,7 @@ const authRoutes = require('./routes/auth.routes');
 const foodRoutes = require('./routes/food.routes');
 const foodPartnerRoutes = require('./routes/food-partner.routes');
 const cors = require('cors');
+require('dotenv').config();
 
 const app = express();
 //fronted is running on port 5173 and backend is running on port 3000
