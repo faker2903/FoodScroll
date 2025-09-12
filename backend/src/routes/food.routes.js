@@ -11,7 +11,7 @@ const upload = multer({
 
 
 // POST /api/food/
-// it should be protected route so only food partner can create food item .user should not be able to create food item like when u r ordering food only customer can order and list the food items but only food partner can create the food item
+// it should be protected route so only food partner can create food item . user should not be able to create food item like when u r ordering food only customer can order and list the food items but only food partner can create the food item
 router.post('/',
     authMiddleware.authFoodPartnerMiddleware,
     upload.single("mama"),
