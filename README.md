@@ -55,7 +55,7 @@ A TikTok-like social video sharing platform specifically designed for food conte
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/foodscroll.git
+   git clone https://github.com/faker2903/foodscroll.git
    cd foodscroll
    ```
 
@@ -162,22 +162,6 @@ The application uses JWT-based authentication with role-based access control:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 👨‍💻 Author
-
-**Prem Kumar Mondal**
-- GitHub: [@faker2903](https://github.com/faker2903)
-- Email: ace2903722@gmail.com
-
-## 🙏 Acknowledgments
-
-- React.js community for excellent documentation
-- MongoDB team for the powerful database solution
-- Express.js team for the minimal web framework
-- All open-source contributors who made this project possible
 
 ---
 
